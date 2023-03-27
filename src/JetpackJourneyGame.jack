@@ -205,7 +205,7 @@ class JetpackJourneyGame
     return;
   }
 
-  /** Обновляем количество падений, передвигая игрока только после 3 циклов отрисовки,
+  /** Обновляем количество падений, передвигая игрока только после 5 циклов отрисовки,
   чтобы не он падал слишком быстро */
   method void updatePlayerFallState() {
     let playerFallCount = MyMath.mod(playerFallCount + 1,5);
