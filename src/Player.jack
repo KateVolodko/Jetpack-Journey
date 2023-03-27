@@ -2,9 +2,9 @@
 class Player {
   field int xPos, yPos;                                 // координата по X, Y
   field int width, height;                              // ширина, высота игрока
-  field int numPlayerState;                             // номер текущего положения
-  field Array currPlayer;                               // рисунок текущего положения
-  field Array firstState, secondState, thirdState;      // рисунок состояний игрока
+  field int numPlayerState;                             // номер текущего состояния
+  field Array currPlayer;                               // рисунок текущего состояния
+  field Array firstState, secondState;                  // рисунок состояний игрока
 
   /** Конструктор принимает координату по y для начального отображения игрока */
   constructor Player new(int playerYPosDefault) {
@@ -15,14 +15,12 @@ class Player {
     let numPlayerState = 0;
     do buildFirstArray();
     do buildSecondArray();
-    do buildThirdArray();
     do draw();
     return this;
   }
 
   /** Сдвиг игрока вверх */
-  method void moveUp()
-  {
+  method void moveUp() {
     do erase();
     if (yPos > height + 5) {
       let yPos = yPos - 5;
@@ -33,8 +31,7 @@ class Player {
   }
 
   /** Сдвиг игрока вниз */
-  method void moveDown()
-  {
+  method void moveDown() {
     do erase();
     if (yPos < 225) {
       let yPos = yPos + 30;
@@ -45,8 +42,7 @@ class Player {
   }
 
   /** Удаление изображения игрока */
-  method void erase()
-  {
+  method void erase() {
     do Screen.setColor(false);
     do Screen.drawRectangle(xPos, yPos, xPos + width, yPos + height);
     return;
@@ -54,84 +50,74 @@ class Player {
 
   /** Создание первого состояния игрока */
   method void buildFirstArray() {
-
-    let firstState = Array.new(12);
-
-    let firstState[0] = 4032;
-    let firstState[1] = 4656;
-    let firstState[2] = 8456;
-    let firstState[3] = 20766;
-    let firstState[4] = 20769;
-    let firstState[5] = 16961;
-    let firstState[6] = -959;
-    let firstState[7] = -32222;
-    let firstState[8] = -740;
-    let firstState[9] = -32252;
-    let firstState[10] = 31768;
-    let firstState[11] = 992;
-
+    let firstState = Array.new(23);
+    let firstState[0] = 4064;
+    let firstState[1] = 4112;
+    let firstState[2] = 8200;
+    let firstState[3] = 16388;
+    let firstState[4] = 16388;
+    let firstState[5] = 16452;
+    let firstState[6] = 20644;
+    let firstState[7] = -28636;
+    let firstState[8] = 16452;
+    let firstState[9] = 16392;
+    let firstState[10] = 10256;
+    let firstState[11] = 4192;
+    let firstState[12] = 3456;
+    let firstState[13] = 2174;
+    let firstState[14] = 2114;
+    let firstState[15] = 12610;
+    let firstState[16] = 16962;
+    let firstState[17] = 15426;
+    let firstState[18] = 2114;
+    let firstState[19] = 2302;
+    let firstState[20] = 2236;
+    let firstState[21] = 4248;
+    let firstState[22] = 3864;
     return;
   }
 
   /** Создание второго состояния игрока */
   method void buildSecondArray() {
-
-    let secondState = Array.new(12);
-
-    let secondState[0] = 4032;
-    let secondState[1] = 4656;
-    let secondState[2] = 8456;
-    let secondState[3] = 20740;
-    let secondState[4] = 20740;
-    let secondState[5] = 16958;
-    let secondState[6] = -959;
-    let secondState[7] = -32191;
-    let secondState[8] = -706;
-    let secondState[9] = -32252;
-    let secondState[10] = 31768;
-    let secondState[11] = 992;
-
-    return;
-  }
-
-  /** Создание третьего состояния игрока */
-  method void buildThirdArray() {
-
-    let thirdState = Array.new(12);
-
-    let thirdState[0] = 4032;
-    let thirdState[1] = 4656;
-    let thirdState[2] = 8456;
-    let thirdState[3] = 20740;
-    let thirdState[4] = 20740;
-    let thirdState[5] = 16898;
-    let thirdState[6] = -962;
-    let thirdState[7] = -32191;
-    let thirdState[8] = -735;
-    let thirdState[9] = -32239;
-    let thirdState[10] = 31774;
-    let thirdState[11] = 992;
-
+    let secondState = Array.new(23);
+    let secondState[0] = 4064;
+    let secondState[1] = 4112;
+    let secondState[2] = 8200;
+    let secondState[3] = 16388;
+    let secondState[4] = 16388;
+    let secondState[5] = 16452;
+    let secondState[6] = 20644;
+    let secondState[7] = -28636;
+    let secondState[8] = 16452;
+    let secondState[9] = 16392;
+    let secondState[10] = 10256;
+    let secondState[11] = 4192;
+    let secondState[12] = 3456;
+    let secondState[13] = 2174;
+    let secondState[14] = 2114;
+    let secondState[15] = 12610;
+    let secondState[16] = 16962;
+    let secondState[17] = 15426;
+    let secondState[18] = 2114;
+    let secondState[19] = 2302;
+    let secondState[20] = 2176;
+    let secondState[21] = 4224;
+    let secondState[22] = 3840;
     return;
   }
 
   /** Определение состояний игрока */
-  method void cyclePlayerState()
-  {
-    let numPlayerState = MyMath.mod (numPlayerState + 1, 3);
+  method void cyclePlayerState() {
+    let numPlayerState = MyMath.mod (numPlayerState + 1, 2);
     return;
   }
 
   /** Координаты текущего состояния игрока */
-  method Array getCurrState()
-  {
+  method Array getCurrState() {
     if (numPlayerState = 0) {
       return firstState;
     }
-    if (numPlayerState = 1) {
-      return secondState;
-    }
-    return thirdState;
+    return secondState;
   }
 
   /** Отрисовка игрока */
@@ -139,7 +125,6 @@ class Player {
     var int memAddress;
     let memAddress = (16384 + (yPos * 32) + (xPos/16));
     let currPlayer = getCurrState();
-
     do Memory.poke(memAddress+0, currPlayer[0]);
     do Memory.poke(memAddress+32, currPlayer[1]);
     do Memory.poke(memAddress+64, currPlayer[2]);
@@ -152,6 +137,17 @@ class Player {
     do Memory.poke(memAddress+288, currPlayer[9]);
     do Memory.poke(memAddress+320, currPlayer[10]);
     do Memory.poke(memAddress+352, currPlayer[11]);
+    do Memory.poke(memAddress+384, currPlayer[12]);
+    do Memory.poke(memAddress+416, currPlayer[13]);
+    do Memory.poke(memAddress+448, currPlayer[14]);
+    do Memory.poke(memAddress+480, currPlayer[15]);
+    do Memory.poke(memAddress+512, currPlayer[16]);
+    do Memory.poke(memAddress+544, currPlayer[17]);
+    do Memory.poke(memAddress+576, currPlayer[18]);
+    do Memory.poke(memAddress+608, currPlayer[19]);
+    do Memory.poke(memAddress+640, currPlayer[20]);
+    do Memory.poke(memAddress+672, currPlayer[21]);
+    do Memory.poke(memAddress+704, currPlayer[22]);
     return;
   }
 
