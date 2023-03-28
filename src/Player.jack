@@ -11,7 +11,7 @@ class Player {
     let yPos = playerYPosDefault;
     let xPos = 160;
     let width = 16;
-    let height = 12;
+    let height = 23;
     let numPlayerState = 0;
     do buildFirstArray();
     do buildSecondArray();
