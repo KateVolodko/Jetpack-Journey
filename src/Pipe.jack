@@ -1,13 +1,13 @@
 /** Создание и обновление изображения колонны */
 class Pipe {
   field int screenWidth, screenHeight;           
-  field int xPos;                                // Координа X колонны (состоит из верхней и нижней частей)
-  field int gapSize;                             // Расстояние между верхней и нижней частями колонны
-  field int gapTopYPos;                          // Координата низа верхней части колонны по Y
-  field int gapBottomYPos;                       // Координата верха нижней части колонны по Y
-  field int width;                               // Полная ширина колонны
-  field int widthCurrent;                        // Ширина видимой части колонны
-  field int widthIncrement;                      // Величина сдвига колонны за шаг
+  field int xPos;                                // координа X колонны (состоит из верхней и нижней частей)
+  field int gapSize;                             // расстояние между верхней и нижней частями колонны
+  field int gapTopYPos;                          // координата низа верхней части колонны по Y
+  field int gapBottomYPos;                       // координата верха нижней части колонны по Y
+  field int width;                               // полная ширина колонны
+  field int widthCurrent;                        // ширина видимой части колонны
+  field int widthIncrement;                      // величина сдвига колонны за шаг
   
   constructor Pipe new(int gapOffset) {
     let screenWidth = 512;
