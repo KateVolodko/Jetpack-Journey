@@ -1,4 +1,4 @@
-class LettersAndSymbolsDrafts{
+class LettersAndSymbolsDrafts {
 	function int drawS(int cursorPosX, int cursorPosY, int size, int space, boolean color) {
     var int width;
     let width = 5 * size;

@@ -1,5 +1,4 @@
-class Scoreboard
-{
+class Scoreboard {
   field int score;                  
   field int space;                     // Расстояние между символами
   field int startScorePosX;            // Координата по X, с которой начинается надпись
@@ -14,23 +13,12 @@ class Scoreboard
     return this;
   }
 
-  /* Рисуем очки */
+  /* Рисуем надпись и количество очков */
   method void draw(int score) {
     let cursorPosX = startScorePosX;
-    do drawHeading();
-    do drawScore(score);
-    return;
-  }
-
-  /** Рисуем надпись "SCORE:" */
-  method void drawHeading() {
     do blackout();
-    let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, false);
-    let cursorPosX = LettersAndSymbolsDrafts.drawC(cursorPosX, cursorPosY, size, space, false);
-    let cursorPosX = LettersAndSymbolsDrafts.drawO(cursorPosX, cursorPosY, size, space, false);
-    let cursorPosX = LettersAndSymbolsDrafts.drawR(cursorPosX, cursorPosY, size, space, false);
-    let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, false);
-    let cursorPosX = LettersAndSymbolsDrafts.drawColon(cursorPosX, cursorPosY, size, space, false);
+    let cursorPosX = PhraseDrafts.drawScoreLabel(cursorPosX, cursorPosY, size, space, false);
+    do drawScore(score);
     return;
   }
 
@@ -123,7 +111,6 @@ class Scoreboard
     return;
   }
 
-  /** Удаляем все объекты, созданные в данном классе */
   method void dispose() {
      do Memory.deAlloc(this);
      return;

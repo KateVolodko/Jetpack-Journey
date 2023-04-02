@@ -1,4 +1,4 @@
-class NumbersDrafts{
+class NumbersDrafts {
     function int drawZero(int cursorPosX, int cursorPosY, int size, int space, boolean color) {
         var int width;
         let width = 5 * size;

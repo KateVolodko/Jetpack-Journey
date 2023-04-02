@@ -1,0 +1,78 @@
+class PhraseDrafts {
+    function int drawName(int cursorPosX, int cursorPosY, int size, int space, bolean color) {
+        let cursorPosX = LettersAndSymbolsDrafts.drawJ(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawT(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawP(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawA(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawC(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawK(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawJ(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawO(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawU(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawR(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawN(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawY(cursorPosX, cursorPosY, size, space, color);
+        return cursorPosX;
+    }
+
+    function int drawJumpInstruction(int cursorPosX, int cursorPosY, int size, int space, bolean color) {
+        let cursorPosX = LettersAndSymbolsDrafts.drawP(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawR(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawP(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawA(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawC(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawB(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawA(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawR(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawT(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawO(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawJ(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawU(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawM(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawP(cursorPosX, cursorPosY, size, space, color);
+        return cursorPosX;
+    }
+
+    function int drawQuitInstruction(int cursorPosX, int cursorPosY, int size, int space, bolean color) {
+        let cursorPosX = LettersAndSymbolsDrafts.drawP(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawR(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawQuote(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawQ(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawQuote(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawT(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawO(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = cursorPosX + space;
+        let cursorPosX = LettersAndSymbolsDrafts.drawQ(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawU(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawI(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawT(cursorPosX, cursorPosY, size, space, color);
+        return cursorPosX;
+    }
+
+    function int drawScoreLabel(int cursorPosX, int cursorPosY, int size, int space, bolean color) {
+        let cursorPosX = LettersAndSymbolsDrafts.drawS(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawC(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawO(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawR(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawE(cursorPosX, cursorPosY, size, space, color);
+        let cursorPosX = LettersAndSymbolsDrafts.drawColon(cursorPosX, cursorPosY, size, space, color);
+        return cursorPosX;
+    }
+}

@@ -1,5 +1,4 @@
-class Main
-{
+class Main {
   function void main() {
     var JetpackJourneyGame game;
     let game = JetpackJourneyGame.new();

@@ -1,7 +1,6 @@
-/** Создание и обновление изображений колонн */
-class Pipe
-{
-  field int screenWidth, screenHeight;           // Ширина, высота экрана
+/** Создание и обновление изображения колонны */
+class Pipe {
+  field int screenWidth, screenHeight;           
   field int xPos;                                // Координа X колонны (состоит из верхней и нижней частей)
   field int gapSize;                             // Расстояние между верхней и нижней частями колонны
   field int gapTopYPos;                          // Координата низа верхней части колонны по Y
@@ -85,7 +84,6 @@ class Pipe
     return;
   }
 
-  /** Удаление колонн */
   method void dispose() {
      do Memory.deAlloc(this);
      return;

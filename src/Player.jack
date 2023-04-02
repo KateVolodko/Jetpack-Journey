@@ -1,8 +1,8 @@
-/** Создание и обновление изображения игроока */
+/** Создание и обновление изображения игрока */
 class Player {
   field int xPos, yPos;                                 // координата по X, Y
   field int width, height;                              // ширина, высота игрока
-  field int numPlayerState;                             // номер текущего состояния
+  field int numPlayerState;                             
   field Array currPlayer;                               // рисунок текущего состояния
   field Array firstState, secondState;                  // рисунок состояний игрока
 
@@ -167,7 +167,6 @@ class Player {
     return height;
   }
 
-  /** Удаление всех объектов, созданных в данном классе */
   method void dispose() {
      do Memory.deAlloc(this);
      return;

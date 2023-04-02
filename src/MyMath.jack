@@ -1,6 +1,5 @@
-class MyMath
-{
-  /** Функция, находящая остаток от деления */
+class MyMath {
+  /** Функция, находящая остаток от деления для неотрицательных чисел */
   function int mod(int dividend, int divisor) {
     var int quotient;
     var int remainder;
