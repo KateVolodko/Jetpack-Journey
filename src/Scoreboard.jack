@@ -1,8 +1,8 @@
 class Scoreboard {
   field int score;                  
-  field int space;                     // Расстояние между символами
-  field int startScorePosX;            // Координата по X, с которой начинается надпись
-  field int cursorPosX, cursorPosY;    // Текущая координата курсора по X, Y
+  field int space;                     // расстояние между символами
+  field int startScorePosX;            // координата по X, с которой начинается надпись
+  field int cursorPosX, cursorPosY;    // текущая координата курсора по X, Y
   field int size;                   
 
   constructor Scoreboard new() {
