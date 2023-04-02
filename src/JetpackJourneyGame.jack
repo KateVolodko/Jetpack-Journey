@@ -10,7 +10,7 @@ class JetpackJourneyGame {
   field int distAfterLastPipe;          
   field int jumpsAmount;                
   field int totalPipesAmount;           // количество созданных колонн
-  field int space;                      // растояние меджу буквами в надписи
+  field int space;                      // расстояние меджу буквами в надписи
   field int cursorPosX, cursorPosY;
   field int size;
 
